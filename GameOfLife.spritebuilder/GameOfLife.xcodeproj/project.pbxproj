@@ -136,9 +136,9 @@
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 				9A83E7391AB5FEF0007ED5E9 /* Grid.h */,
+				9A83E73A1AB5FEF0007ED5E9 /* Grid.m */,
 				9A83E73D1AB5FF28007ED5E9 /* Creature.h */,
 				9A83E73E1AB5FF28007ED5E9 /* Creature.m */,
-				9A83E73A1AB5FEF0007ED5E9 /* Grid.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
