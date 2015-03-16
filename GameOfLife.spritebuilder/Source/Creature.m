@@ -12,7 +12,7 @@
 
 - (instancetype) initCreature
 {
-    self = [super initWithImageNamed:@"bubble.png"];
+    self = [super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
     
     if (self) {
         self.isAlive = NO;
