@@ -39,8 +39,8 @@ static const int GRID_COLUMNS = 10;
     
     _gridArray = [NSMutableArray array];
     
-    for (int i=0; i<GRID_ROWS; i++) {
-        _gridArray = [NSMutableArray array];
+    for (int i=0; i < GRID_ROWS; i++) {
+        _gridArray[i] = [NSMutableArray array];
         x = 0;
         
         for (int j=0; j < GRID_COLUMNS; j++) {
@@ -52,10 +52,10 @@ static const int GRID_COLUMNS = 10;
             
             creature.isAlive = YES;
             
-            x+=_cellWidth;
+            x += _cellWidth;
         }
         
-        y+=_cellHeight;
+        y += _cellHeight;
         
     }
 }
