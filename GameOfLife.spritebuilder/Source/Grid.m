@@ -34,6 +34,8 @@ static const int GRID_COLUMNS = 10;
     _cellWidth = self.contentSize.width / GRID_COLUMNS;
     _cellHeight = self.contentSize.height / GRID_ROWS;
     
+    NSLog(@"width is %f and height is %f",self.contentSize.width,self.contentSize.height);
+    
     float x = 0;
     float y = 0;
     
