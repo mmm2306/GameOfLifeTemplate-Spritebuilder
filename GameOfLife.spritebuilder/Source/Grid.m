@@ -69,7 +69,7 @@ static const int GRID_COLUMNS = 10;
 {
     CGPoint touchLocation = [touch locationInNode:self];
     
-    NSLog(@"touch x:%f, and y is %f",touchLocation.x/_cellHeight,touchLocation.y/_cellWidth);
+    NSLog(@"touch x:%f, and y is %f",touchLocation.x/_cellWidth,touchLocation.y/_cellHeight);
     
     Creature *creature = [self creatureForTouchPosition:touchLocation];
     
