@@ -56,9 +56,11 @@ static const int GRID_COLUMNS = 10;
 //            creature.isAlive = YES;
             
             x += _cellWidth;
+            NSLog(@"x=%f",x);
         }
         
         y += _cellHeight;
+        NSLog(@"y=%f",y);
         
     }
 }
