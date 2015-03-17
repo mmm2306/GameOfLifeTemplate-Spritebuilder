@@ -56,11 +56,11 @@ static const int GRID_COLUMNS = 10;
 //            creature.isAlive = YES;
             
             x += _cellWidth;
-            NSLog(@"x=%f",x);
+//            NSLog(@"x=%f",x);
         }
         
         y += _cellHeight;
-        NSLog(@"y=%f",y);
+//        NSLog(@"y=%f",y);
         
     }
 }
@@ -68,6 +68,8 @@ static const int GRID_COLUMNS = 10;
 -(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:self];
+    
+    NSLog(@"touch x:%f, and y is %f",touchLocation.x,touchLocation.y);
     
     Creature *creature = [self creatureForTouchPosition:touchLocation];
     
