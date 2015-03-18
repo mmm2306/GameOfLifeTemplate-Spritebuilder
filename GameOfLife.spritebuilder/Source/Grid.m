@@ -149,12 +149,22 @@ static const int GRID_COLUMNS = 10;
                 
                 currentCreature.isAlive = NO;
             
-            } else if (currentCreature.livingNeighbors == 2 || currentCreature.livingNeighbors == 3) {
+            } else if (currentCreature.livingNeighbors == 2) {
                 
                 currentCreature.isAlive = YES;
                 
-            } else {
+            } else if (currentCreature.livingNeighbors == 3) {
+                
+                currentCreature.isAlive = YES;
+                
+            } else if (currentCreature.livingNeighbors > 3) {
+                
                 currentCreature.isAlive = NO;
+            }
+            
+            if (currentCreature.isAlive) {
+               
+                _totalAlive++;
             }
         }
     }
