@@ -86,4 +86,60 @@ static const int GRID_COLUMNS = 10;
     return _gridArray[row][column];
 }
 
+-(void)evolveStep
+{
+    [self countNeighbors];
+    [self updateCreatures];
+    _generation++;
+}
+
+-(void)countNeighbors
+{
+    for (int i = 0; i < [_gridArray count]; i++) {
+        
+        for (int j = 0; j < [_gridArray[i] count]; j++) {
+            
+            Creature *currentCreature = _gridArray[i][j];
+            currentCreature.livingNeighbors = 0;
+            
+            for (int x = (i-1); x <= (i+1); x++) {
+                
+                for (int y = (j-1); y<= (j+1); y++) {
+                    
+                    BOOL isIndexValid = [self isIndexValidForX:x AndY:y];
+                    
+                    if (!(x==i) && !(y==j) && isIndexValid) {
+                        
+                        Creature *neigbor = _gridArray[x][y];
+                        
+                        if (neigbor.isAlive) {
+                            currentCreature.livingNeighbors += 1;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
+
+-(BOOL)isIndexValidForX:(int)x AndY:(int)y
+{
+    BOOL isValidIndex = YES;
+    
+    if ((x < 0) || (y < 0) || (x >= GRID_ROWS) || (y <= GRID_COLUMNS)) {
+        
+        isValidIndex = NO;
+        
+    }
+    
+    return isValidIndex;
+}
+
+-(void)updateCreatures
+{
+    
+}
+
 @end
